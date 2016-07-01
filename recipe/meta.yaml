@@ -15,7 +15,7 @@ source:
      - python35-compat.patch  # [py35]
 
 build:
-  number: 0
+  number: 1
   script: python setup.py install --single-version-externally-managed --record=record.txt
 
 
