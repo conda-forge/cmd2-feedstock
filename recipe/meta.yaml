@@ -13,9 +13,10 @@ source:
   {{ hash_type }}: {{ hash_val }}
   patches:
      - python35-compat.patch  # [py35]
+     # this patch is taken from upstream; see https://bitbucket.org/catherinedevlin/cmd2/issues/18/python-35-renames-subprocessmswindows
 
 build:
-  number: 0
+  number: 1
   script: python setup.py install --single-version-externally-managed --record=record.txt
 
 
