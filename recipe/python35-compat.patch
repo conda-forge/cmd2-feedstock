@@ -1,9 +1,9 @@
---- a/cmd2.py
-+++ b/cmd2.py
+--- cmd2.py
++++ cmd2.py
 @@ -47,6 +47,13 @@
  if sys.version_info[0] == 2:
      pyparsing.ParserElement.enablePackrat()
- 
+
 +try:
 +    is_mswindows = subprocess.mswindows
 +except AttributeError:
@@ -13,11 +13,11 @@
 +
  """
  Packrat is causing Python3 errors that I don't understand.
- 
+
 @@ -184,7 +191,7 @@
  to be installed on operating system.
  %s"""
- 
+
 -if subprocess.mswindows:
 +if is_mswindows:
      try:
