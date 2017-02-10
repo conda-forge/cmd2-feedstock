@@ -1,7 +1,8 @@
 {%set name = "cmd2" %}
-{%set version = "0.6.8" %}
+{%set version = "0.6.9" %}
 {%set hash_type = "sha256" %}
-{%set hash_val = "ac780d8c31fc107bf6b4edcbcea711de4ff776d59d89bb167f8819d2d83764a8" %}
+{%set hash_val = "ef09745c91dbc13344db6d81f4dea4c844bf2fabf3baf91fab1bb54e4b3bb328" %}
+{%set build_num = "0" %}
 
 package:
   name: {{ name }}
@@ -11,12 +12,9 @@ source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   {{ hash_type }}: {{ hash_val }}
-  patches:
-     - python35-compat.patch  # [py35]
-     # this patch is taken from upstream; see https://bitbucket.org/catherinedevlin/cmd2/issues/18/python-35-renames-subprocessmswindows
 
 build:
-  number: 2
+  number: {{ build_num }}
   script: python setup.py install --single-version-externally-managed --record=record.txt
 
 
@@ -31,12 +29,13 @@ requirements:
 
 test:
   imports:
-    - {{ name }}
+    - cmd2
 
 about:
   home: http://packages.python.org/cmd2/
   license: MIT
   license_family: MIT
+  license_file: LICENSE
   summary: "Extra features for standard library's cmd module"
   dev_url: https://bitbucket.org/catherinedevlin/cmd2
   doc_url: https://pythonhosted.org/cmd2/
