@@ -1,7 +1,7 @@
 About cmd2
 ==========
 
-Home: http://packages.python.org/cmd2/
+Home: https://github.com/python-cmd2/cmd2
 
 Package license: MIT
 
