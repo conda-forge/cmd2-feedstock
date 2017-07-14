@@ -27,6 +27,7 @@ requirements:
   run:
     - python
     - pyparsing >=2.0.1
+    - pyperclip
     - six
 
 test:
