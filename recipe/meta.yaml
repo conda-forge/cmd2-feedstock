@@ -18,7 +18,6 @@ build:
   number: {{ build }}
   script: python setup.py install --single-version-externally-managed --record=record.txt
 
-
 requirements:
   build:
     - python
@@ -29,6 +28,7 @@ requirements:
     - pyparsing >=2.0.1
     - pyperclip
     - six
+    - pyreadline  # [win]
 
 test:
   imports:
