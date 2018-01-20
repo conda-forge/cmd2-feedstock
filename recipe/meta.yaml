@@ -1,8 +1,8 @@
 {% set name = "cmd2" %}
-{% set version = "0.7.7" %}
+{% set version = "0.7.9" %}
 {% set bundle = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash = "b4e2fb9fc656adccc4d01dfd55ab5a9b05890e961950543f692e7885725c2d72" %}
+{% set hash = "f518d30c641483c8d6c246afae6e4447f816f8300befc6a11c476eeb62a496e6" %}
 {% set build = 0 %}
 
 package:
@@ -18,7 +18,6 @@ build:
   number: {{ build }}
   script: python setup.py install --single-version-externally-managed --record=record.txt
 
-
 requirements:
   build:
     - python
@@ -29,6 +28,7 @@ requirements:
     - pyparsing >=2.0.1
     - pyperclip
     - six
+    - pyreadline  # [win]
 
 test:
   imports:
