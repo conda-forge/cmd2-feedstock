@@ -1,8 +1,8 @@
 {% set name = "cmd2" %}
-{% set version = "0.7.9" %}
+{% set version = "0.8.0" %}
 {% set bundle = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash = "f518d30c641483c8d6c246afae6e4447f816f8300befc6a11c476eeb62a496e6" %}
+{% set hash = "4b3a9d9f305039ca94deb93e0a54ba896f12d1aae7206c6283fe02c6dbb0b7ba" %}
 {% set build = 0 %}
 
 package:
@@ -15,7 +15,7 @@ source:
   {{ hash_type }}: {{ hash }}
 
 build:
-  number: {{ build }}
+  number: 0
   script: python setup.py install --single-version-externally-managed --record=record.txt
 
 requirements:
