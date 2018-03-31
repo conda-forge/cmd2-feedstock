@@ -3,7 +3,6 @@
 {% set bundle = "tar.gz" %}
 {% set hash_type = "sha256" %}
 {% set hash = "4b3a9d9f305039ca94deb93e0a54ba896f12d1aae7206c6283fe02c6dbb0b7ba" %}
-{% set build = 0 %}
 
 package:
   name: {{ name }}
@@ -21,7 +20,7 @@ build:
 requirements:
   build:
     - python
-    - setuptools
+    - setuptools >=18.0
 
   run:
     - python
@@ -29,6 +28,9 @@ requirements:
     - pyperclip
     - six
     - pyreadline  # [win]
+    - contextlib  # [py<35]
+    - enumb34  # [py<34]
+    - subprocess32  # [py2k]
 
 test:
   imports:
