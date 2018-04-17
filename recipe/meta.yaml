@@ -3,7 +3,6 @@
 {% set bundle = "tar.gz" %}
 {% set hash_type = "sha256" %}
 {% set hash = "d04393cd76ca475ef6708dd0c2ac35ac7daf66500f26907718f3f60ddef32f4d" %}
-{% set build = 0 %}
 
 package:
   name: {{ name }}
@@ -11,24 +10,29 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.{{ bundle }}
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ bundle }}
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ bundle }}
   {{ hash_type }}: {{ hash }}
 
 build:
   number: 0
-  script: python setup.py install --single-version-externally-managed --record=record.txt
+  script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
   build:
     - python
-    - setuptools
+    - pip
 
   run:
     - python
     - pyparsing >=2.0.1
     - pyperclip
     - six
+    - wcwidth  # [not win]
     - pyreadline  # [win]
+    - contextlib2  # [py<35]
+    - enum34  # [py<34]
+    - subprocess32  # [py2k] 
+    
 
 test:
   imports:
