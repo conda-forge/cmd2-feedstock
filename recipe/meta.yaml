@@ -25,13 +25,12 @@ requirements:
 
   run:
     - python
-    - pyparsing >=2.0.1
-    - pyperclip
-    - six
+    - pyperclip >= 1.5.27
+    - colorama
     - pyreadline  # [win]
     - wcwidth  # [not win]
     - contextlib2  # [py<35]
-    - contextlib2  # [py<35]
+    - typing # [py<35]
     
 
 test:
