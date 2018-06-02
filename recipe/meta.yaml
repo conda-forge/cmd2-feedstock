@@ -30,7 +30,7 @@ requirements:
     - pyreadline  # [win]
     - wcwidth  # [not win]
     - contextlib2  # [py<35]
-    - typing # [py<35]
+    - typing  # [py<35]
     
 
 test:
