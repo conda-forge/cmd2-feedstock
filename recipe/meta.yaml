@@ -1,11 +1,11 @@
 {% set name = "cmd2" %}
-{% set version = "0.9.0" %}
+{% set version = "0.9.0.1" %}
 {% set bundle = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash = "4457f24e3827cfa3cf857d897ac3eee7c90c401ed7663cf853d9e6cbdc0df78d" %}
+{% set hash = "137c29b79263321f3f5f336f70c258f981657985734a05133d4efe06c44b3412" %}
 
 package:
-  name: {{ name }}
+  name: {{ name|lower }}
   version: {{ version }}
 
 source:
@@ -14,6 +14,7 @@ source:
   {{ hash_type }}: {{ hash }}
 
 build:
+  skip: True  # [py2k]
   number: 0
   script: python -m pip install --no-deps --ignore-installed .
 
@@ -27,11 +28,10 @@ requirements:
     - pyparsing >=2.0.1
     - pyperclip
     - six
-    - wcwidth  # [not win]
     - pyreadline  # [win]
+    - wcwidth  # [not win]
     - contextlib2  # [py<35]
-    - enum34  # [py<34]
-    - subprocess32  # [py2k] 
+    - contextlib2  # [py<35]
     
 
 test:
