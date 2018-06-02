@@ -14,14 +14,16 @@ Summary: Extra features for standard library's cmd module
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/cmd2-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/cmd2-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/cmd2-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/cmd2-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/cmd2-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/cmd2-feedstock/branch/master)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/cmd2-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/cmd2-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/cmd2-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/cmd2-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/cmd2-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/cmd2-feedstock/branch/master)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/cmd2/badges/version.svg)](https://anaconda.org/conda-forge/cmd2)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/cmd2/badges/downloads.svg)](https://anaconda.org/conda-forge/cmd2)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-cmd2-green.svg)](https://anaconda.org/conda-forge/cmd2) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/cmd2.svg)](https://anaconda.org/conda-forge/cmd2) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/cmd2.svg)](https://anaconda.org/conda-forge/cmd2) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/cmd2.svg)](https://anaconda.org/conda-forge/cmd2) |
 
 Installing cmd2
 ===============
