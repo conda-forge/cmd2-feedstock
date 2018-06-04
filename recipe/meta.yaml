@@ -5,7 +5,7 @@
 {% set hash = "89ac1e88eb7627acb74d1ae5d18dc01f9ddea4ec1c82caac8360f4f89323fcf2" %}
 
 package:
-  name: {{ name }}
+  name: {{ name|lower }}
   version: {{ version }}
 
 source:
@@ -14,6 +14,7 @@ source:
   {{ hash_type }}: {{ hash }}
 
 build:
+  skip: True  # [py2k]
   number: 0
   script: python -m pip install --no-deps --ignore-installed .
 
@@ -24,14 +25,12 @@ requirements:
 
   run:
     - python
-    - pyparsing >=2.0.1
-    - pyperclip
-    - six
-    - wcwidth  # [not win]
+    - pyperclip >=1.5.27
+    - colorama
     - pyreadline  # [win]
+    - wcwidth  # [not win]
     - contextlib2  # [py<35]
-    - enum34  # [py<34]
-    - subprocess32  # [py2k] 
+    - typing  # [py<35]
     
 
 test:
