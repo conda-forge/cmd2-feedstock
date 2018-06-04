@@ -25,7 +25,7 @@ requirements:
 
   run:
     - python
-    - pyperclip >= 1.5.27
+    - pyperclip >=1.5.27
     - colorama
     - pyreadline  # [win]
     - wcwidth  # [not win]
