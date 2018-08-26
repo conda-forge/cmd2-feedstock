@@ -25,6 +25,7 @@ requirements:
 
   run:
     - python
+    - setuptools
     - pyperclip >=1.5.27
     - colorama
     - attrs
