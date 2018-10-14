@@ -1,8 +1,8 @@
 {% set name = "cmd2" %}
-{% set version = "0.9.4" %}
+{% set version = "0.9.6" %}
 {% set bundle = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash = "0037dcf92331c63ae43e7e644536e646fff8be2fd5a83da06b3482f910f929c6" %}
+{% set hash = "5c4d92c089d014dfb750a9d05cefd231e2dca437cc25edf535de7a63cdb9e908" %}
 
 package:
   name: {{ name|lower }}
@@ -14,7 +14,7 @@ source:
 
 build:
   skip: True  # [py2k]
-  number: 1000
+  number: 0
   script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
