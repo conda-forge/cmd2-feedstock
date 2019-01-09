@@ -1,6 +1,8 @@
 About cmd2
 ==========
 
+[![Powered by NumFOCUS](https://img.shields.io/badge/powered%20by-NumFOCUS-orange.svg?style=flat&colorA=E1523D&colorB=007D8A)](http://numfocus.org)
+
 Home: https://github.com/python-cmd2/cmd2
 
 Package license: MIT
@@ -104,3 +106,10 @@ In order to produce a uniquely identifiable distribution:
  * If the version of a package **is** being increased, please remember to return
    the [``build/number``](https://conda.io/docs/user-guide/tasks/build-packages/define-metadata.html#build-number-and-string)
    back to 0.
+
+Feedstock Maintainers
+=====================
+
+* [@anguslees](https://github.com/anguslees/)
+* [@pmlandwehr](https://github.com/pmlandwehr/)
+
