@@ -14,7 +14,7 @@ source:
 
 build:
   skip: True  # [py2k]
-  number: 1000
+  number: 0
   script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
@@ -30,7 +30,7 @@ requirements:
     - colorama
     - attrs
     - pyreadline  # [win]
-    - wcwidth  # [not win]
+    - wcwidth
     - contextlib2  # [py<35]
     - typing  # [py<35]
     
