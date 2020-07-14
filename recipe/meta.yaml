@@ -1,8 +1,7 @@
 {% set name = "cmd2" %}
-{% set version = "0.9.22" %}
+{% set version = "1.2.0" %}
 {% set bundle = "tar.gz" %}
-{% set hash_type = "sha256" %}
-{% set hash = "ba244b07c0b465ff54a6838dc61919599141dc92de1bf00bb0a70875189155e6" %}
+{% set hash = "5fa7bd03e60a4911916143d89c23ca14ac7c157d3f72eb49ad6306d0a3fbf0f0" %}
 
 package:
   name: {{ name|lower }}
@@ -10,10 +9,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ bundle }}
-  {{ hash_type }}: {{ hash }}
+  sha256: {{ hash }}
 
 build:
-  skip: True  # [py2k]
+  skip: true  # [py2k]
   number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
@@ -33,7 +32,6 @@ requirements:
     - wcwidth
     - contextlib2  # [py<35]
     - typing  # [py<35]
-    
 
 test:
   imports:
@@ -44,7 +42,7 @@ about:
   license_file: LICENSE
   license: MIT
   license_family: MIT
-  summary: "Extra features for standard library's cmd module"
+  summary: Extra features for standard library's cmd module
   dev_url: https://github.com/python-cmd2/cmd2
   doc_url: https://cmd2.readthedocs.io/
 
