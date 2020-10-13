@@ -1,7 +1,6 @@
 {% set name = "cmd2" %}
 {% set version = "0.9.22" %}
 {% set bundle = "tar.gz" %}
-{% set hash_type = "sha256" %}
 {% set hash = "ba244b07c0b465ff54a6838dc61919599141dc92de1bf00bb0a70875189155e6" %}
 
 package:
@@ -10,11 +9,11 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ bundle }}
-  {{ hash_type }}: {{ hash }}
+  sha256: {{ hash }}
 
 build:
   skip: True  # [py2k]
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
