@@ -1,7 +1,7 @@
 {% set name = "cmd2" %}
-{% set version = "0.9.22" %}
+{% set version = "1.5.0" %}
 {% set bundle = "tar.gz" %}
-{% set hash = "ba244b07c0b465ff54a6838dc61919599141dc92de1bf00bb0a70875189155e6" %}
+{% set hash = "701a8c9975c4abc45e5d13906ab149f959f812869106347323a3f89ac0e82a62" %}
 
 package:
   name: {{ name|lower }}
@@ -12,8 +12,7 @@ source:
   sha256: {{ hash }}
 
 build:
-  skip: True  # [py2k]
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
@@ -25,14 +24,13 @@ requirements:
   run:
     - python
     - setuptools
-    - pyperclip >=1.5.27
-    - colorama
-    - attrs
-    - pyreadline  # [win]
-    - wcwidth
-    - contextlib2  # [py<35]
-    - typing  # [py<35]
-    
+    - pyperclip >=1.6
+    - colorama >=0.3.7
+    - attrs >=16.3.0
+    - pyreadline  # [win and py<38]
+    - pyreadline3  # [win and py>=38]
+    - wcwidth >=0.1.7
+    - importlib_metadata >=1.6.0  # [py<38]
 
 test:
   imports:
@@ -43,7 +41,7 @@ about:
   license_file: LICENSE
   license: MIT
   license_family: MIT
-  summary: "Extra features for standard library's cmd module"
+  summary: Extra features for standard library's cmd module
   dev_url: https://github.com/python-cmd2/cmd2
   doc_url: https://cmd2.readthedocs.io/
 
@@ -51,3 +49,4 @@ extra:
   recipe-maintainers:
     - anguslees
     - pmlandwehr
+    - tschoonj
