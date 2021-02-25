@@ -12,7 +12,6 @@ source:
   sha256: {{ hash }}
 
 build:
-  skip: true  # [py2k]
   number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
@@ -25,13 +24,13 @@ requirements:
   run:
     - python
     - setuptools
-    - pyperclip >=1.5.27
-    - colorama
-    - attrs
-    - pyreadline  # [win]
-    - wcwidth
-    - contextlib2  # [py<35]
-    - typing  # [py<35]
+    - pyperclip >=1.6
+    - colorama >=0.3.7
+    - attrs >=16.3.0
+    - pyreadline  # [win and py<38]
+    - pyreadline3  # [win and py>=38]
+    - wcwidth >=0.1.7
+    - importlib_metadata >=1.6.0  # [py<38]
 
 test:
   imports:
