@@ -24,13 +24,14 @@ requirements:
   run:
     - python
     - setuptools
-    - pyperclip >=1.6
-    - colorama >=0.3.7
     - attrs >=16.3.0
+    - colorama >=0.3.7
+    - importlib_metadata >=1.6.0  # [py<38]
+    - pyperclip >=1.6
+    - typing_extensions >=1.6.0  # [py<38]
     - pyreadline  # [win and py<38]
     - pyreadline3  # [win and py>=38]
     - wcwidth >=0.1.7
-    - importlib_metadata >=1.6.0  # [py<38]
 
 test:
   imports:
