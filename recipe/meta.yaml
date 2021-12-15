@@ -35,6 +35,10 @@ requirements:
 test:
   imports:
     - cmd2
+  requires:
+    - pip
+  commands:
+    - pip check
 
 about:
   home: https://github.com/python-cmd2/cmd2
