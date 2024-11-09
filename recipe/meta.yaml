@@ -28,10 +28,10 @@ requirements:
   run:
     - python
     - setuptools
-    - attrs >=16.3.0
     - pyperclip >=1.6
     - pyreadline3  # [win]
     - wcwidth >=0.1.7
+    - gnureadline  # [osx]
 
 test:
   imports:
