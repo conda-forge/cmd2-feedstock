@@ -1,7 +1,7 @@
 {% set name = "cmd2" %}
-{% set version = "2.5.2" %}
+{% set version = "2.5.4" %}
 {% set bundle = "tar.gz" %}
-{% set hash = "62c55943414edd0f94adf13c511ee8906435a6337f4c747ec65e332b3750c697" %}
+{% set hash = "405016f6cee5d4155534a39c8089ebedcfffbb3e24c37150a2b61df32ec90122" %}
 
 package:
   name: {{ name|lower }}
@@ -28,10 +28,10 @@ requirements:
   run:
     - python
     - setuptools
-    - attrs >=16.3.0
     - pyperclip >=1.6
     - pyreadline3  # [win]
     - wcwidth >=0.1.7
+    - gnureadline  # [osx]
 
 test:
   imports:
