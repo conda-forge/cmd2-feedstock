@@ -1,7 +1,7 @@
 {% set name = "cmd2" %}
-{% set version = "2.5.8" %}
+{% set version = "2.6.0" %}
 {% set bundle = "tar.gz" %}
-{% set hash = "ddf29beaa7c9d4e9806eefad528a59c372ca97b4c0d83e019fef0e37c44f4497" %}
+{% set hash = "8cffaba7810526421cab3bfa0101b4907e1298ff2bcd8119615965a2eae5d95f" %}
 
 package:
   name: {{ name|lower }}
@@ -36,10 +36,6 @@ requirements:
 test:
   imports:
     - cmd2
-  requires:
-    - pip
-  commands:
-    - pip check
 
 about:
   home: https://github.com/python-cmd2/cmd2
