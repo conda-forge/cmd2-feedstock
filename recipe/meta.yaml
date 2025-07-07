@@ -32,6 +32,7 @@ requirements:
     - pyreadline3  # [win]
     - wcwidth >=0.1.7
     - gnureadline  # [osx]
+    - rich-argparse >=1.7.1
 
 test:
   imports:
