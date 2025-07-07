@@ -1,7 +1,7 @@
 {% set name = "cmd2" %}
-{% set version = "2.6.2" %}
+{% set version = "2.7.0" %}
 {% set bundle = "tar.gz" %}
-{% set hash = "bde128c0b6dba9d2d9179a1c7c8fe92ab930473d0ddf46f2bc19cb789f942e4d" %}
+{% set hash = "81d8135b46210e1d03a5a810baf859069a62214788ceeec3588f44eed86fbeeb" %}
 
 package:
   name: {{ name|lower }}
@@ -32,6 +32,7 @@ requirements:
     - pyreadline3  # [win]
     - wcwidth >=0.1.7
     - gnureadline  # [osx]
+    - rich-argparse >=1.7.1
 
 test:
   imports:
