@@ -1,7 +1,7 @@
 {% set name = "cmd2" %}
-{% set version = "2.7.0" %}
+{% set version = "3.1.0" %}
 {% set bundle = "tar.gz" %}
-{% set hash = "81d8135b46210e1d03a5a810baf859069a62214788ceeec3588f44eed86fbeeb" %}
+{% set hash = "cce3aece018b0b1055988adaa2b687ac9c1df38bfd2abfc29dbeb51a9707de33" %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +12,7 @@ source:
   sha256: {{ hash }}
 
 build:
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
