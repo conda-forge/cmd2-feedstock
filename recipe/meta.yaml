@@ -33,6 +33,7 @@ requirements:
     - wcwidth >=0.1.7
     - gnureadline  # [osx]
     - rich-argparse >=1.7.1
+    - backports.strenum  # [py==310]
 
 test:
   imports:
