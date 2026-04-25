@@ -1,7 +1,7 @@
 {% set name = "cmd2" %}
-{% set version = "3.5.0" %}
+{% set version = "3.5.1" %}
 {% set bundle = "tar.gz" %}
-{% set hash = "986703264b8231597db598bd85134209e401cc314920eee6ecf48c65e53a6825" %}
+{% set hash = "1637f765e764b022dfa617f4711fb441599732082eb6310cf8739fbaec2335a0" %}
 
 package:
   name: {{ name|lower }}
